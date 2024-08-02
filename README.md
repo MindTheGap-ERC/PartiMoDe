@@ -1,6 +1,6 @@
 # PartiMoDE
 
-Modeling **Parti**cle **Mo**vement and **De**struction in the surface mixed layer of sediments.
+Modeling **Parti**cle **Mo**vement and **De**struction in the sediment surface mixed layer.
 
 ## Purpose
 
