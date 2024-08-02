@@ -12,7 +12,7 @@ Before particles such as fossil remains are fixed in the fossil record, they are
 ## Software requirements
 
 Matlab 2006a or later.  
-The code was written in Matlab2022, the implementation calls the Matlab internal function [pdepe](https://nl.mathworks.com/help/matlab/ref/pdepe.html) and will thus not run in Octave.
+The code was written in Matlab 2022, the implementation calls the Matlab internal function [pdepe](https://nl.mathworks.com/help/matlab/ref/pdepe.html) and will thus not run in Octave.
 
 ## Authors
 
@@ -28,7 +28,7 @@ To cite this repository, please use
 
 * Niklas Hohmann. (2024). MindTheGap-ERC/PartiMoDe: PartiMoDe: Modeling particle movement and destruction in the sediment surface mixed layer (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.13169644
 
-,see the *CITATION.cff* file at the root of the repostitory, or use the *"cite this repository"* button on GitHub.
+or see the *CITATION.cff* file at the root of the repoitory, or use the *"cite this repository"* button on GitHub.
 
 ## Copyright
 
