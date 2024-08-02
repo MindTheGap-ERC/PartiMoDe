@@ -13,6 +13,10 @@ authors:
     email: N.H.Hohmann@uu.nl
     affiliation: Utrecht University
     orcid: 'https://orcid.org/0000-0003-1559-1838'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.13169644
+    description: v1.0.0 release
 repository-code: 'https://github.com/MindTheGap-ERC/PartiMoDe'
 abstract: >-
   Before particles such as fossil remains are fixed in the

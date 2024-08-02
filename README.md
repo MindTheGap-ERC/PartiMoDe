@@ -1,4 +1,7 @@
 # PartiMoDE
+<!-- badges: start -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13169644.svg)](https://doi.org/10.5281/zenodo.13169644)
+ <!-- badges: end -->
 
 Modeling **Parti**cle **Mo**vement and **De**struction in the sediment surface mixed layer.
 
@@ -18,6 +21,14 @@ Utrecht University
 email: n.h.hohmann [at] uu.nl  
 Web page: [www.uu.nl/staff/NHohmann](https://www.uu.nl/staff/NHHohmann)  
 ORCID: [0000-0003-1559-1838](https://orcid.org/0000-0003-1559-1838)
+
+## Citation
+
+To cite this repository, please use
+
+* Niklas Hohmann. (2024). MindTheGap-ERC/PartiMoDe: PartiMoDe: Modeling particle movement and destruction in the sediment surface mixed layer (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.13169644
+
+or see the *CITATION.cff* file at the root of the repostitory
 
 ## Copyright
 
