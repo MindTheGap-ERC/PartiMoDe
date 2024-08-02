@@ -28,7 +28,7 @@ To cite this repository, please use
 
 * Niklas Hohmann. (2024). MindTheGap-ERC/PartiMoDe: PartiMoDe: Modeling particle movement and destruction in the sediment surface mixed layer (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.13169644
 
-or see the *CITATION.cff* file at the root of the repostitory
+,see the *CITATION.cff* file at the root of the repostitory, or use the *"cite this repository"* button on GitHub.
 
 ## Copyright
 
