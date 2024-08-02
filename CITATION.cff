@@ -1,0 +1,36 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: PartiMoDE
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Niklas
+    family-names: Hohmann
+    email: N.H.Hohmann@uu.nl
+    affiliation: Utrecht University
+    orcid: 'https://orcid.org/0000-0003-1559-1838'
+repository-code: 'https://github.com/MindTheGap-ERC/PartiMoDe'
+abstract: >-
+  Before particles such as fossil remains are fixed in the
+  fossil record, they are mixed, moved, and destroyed in the
+  surface mixed layer of the sediment. As a result,
+  particles of the same age can be found at different depths
+  (stratigraphic disorder), and at the same depth, particles
+  of various ages can be found (time-averaging). The
+  PartiMoDe model simulates the distribution of particle
+  ages and depths as a function of mixing, sedimentation,
+  destruction (taphonomy), and varying import/export fluxes.
+keywords:
+  - Sedimentology
+  - Surface mixed layer
+  - Diffusion-reaction-advection
+  - time averaging
+  - stratigraphic disorder
+license: Apache-2.0
+commit: 065d37c7909c73ed2fd06a66acc39e5b991c0e81
+version: v1.0.0
+date-released: '2024-08-02'
