@@ -1,12 +1,12 @@
 # Documentation of the PartiMoDe model
 
-The PartiMoDe model simulates the age-depth distribution (ADD) $u(x,a)$ of particles. Here $x$ is depth and $a$ is age. Depending on the interpretation of the outputs, $a$ can also refer to time.
+The PartiMoDe model simulates the age-depth distribution (ADD) $u(d,a)$ of particles. Here $d$ is depth (measured from the sediment surface), and $a$ is age. Depending on the interpretation of the outputs, $a$ can also refer to time.
 
 The PartiMoDe model comes in three flavors which are explained in detail below:
 
 * PartiMoDe: The base model, where components depend on depth and age/time (implemented in `PartiMoDe`).
-* PartiMoDe StEn (stable environment): Model components depend on depth, but not on time (implemented in `PartiMoDe_StEn`).
-* PartiMoDe LoFi (location fixed): Model components depend on depth, but not on time. Input location of particles is fixed, but influx of particles varies with time/age (implemented in `PartiMoDe_LoFi`).
+* PartiMoDe StEn (stable environment): Model components depend on depth, but not on age/time (implemented in `PartiMoDe_StEn`).
+* PartiMoDe LoFi (location fixed): Model components depend on depth, but not on age. Input location of particles is fixed, but influx of particles varies with time/age (implemented in `PartiMoDe_LoFi`).
 
 It comes with two helper functions:
 
@@ -21,30 +21,32 @@ This model describes the distribution of particle ages and depths as a function 
 * location of particles of age 0 (input location)
 * influx and outflux of particles through the sediment surface.
 
+In this model, age $a$ can also be interpreted as time (mutatis mutandis).
+
 The system is specified by the partial differential equation (PDE)
 
 $$
-\frac{\partial}{\partial a} u(x,a) =  \frac{ \partial }{ \partial x} \left( M(x,a)  \frac{\partial}{\partial x} u(x,a) - S(x,a)  u(x,a) \right) - \lambda(x,a) u(x,a)
+\frac{\partial}{\partial a} u(d,a) =  \frac{ \partial }{ \partial d} \left( M(d,a)  \frac{\partial}{\partial d} u(d,a) - S(d,a)  u(d,a) \right) - \lambda(d,a) u(d,a)
 $$
 
 with boundary condtions
 
 $$
-u(x,0) = f_0(x)
+u(d,0) = f_0(d)
 $$
 
 (initial conditions), flux through the sediment surface $f_{inflow}(a) - f_{outflow}(a)$. The bottom boundary condition is that there is no diffusive flux.
 
 The meaning of the model components are:
 
-* $M(x, a)$ depth and age dependent mixing coefficient
-* $S(x,a)$ depth and age dependent sedimentation/burial rate
-* $\lambda(x,a)$ depth and age dependent disintegration rate
-* $f_0(x)$ location where particles of age 0 are placed into the sediment
+* $M(d, a)$ depth and age dependent mixing coefficient
+* $S(d,a)$ depth and age dependent sedimentation/burial rate
+* $\lambda(d,a)$ depth and age dependent disintegration rate
+* $f_0(d)$ location where particles of age 0 are placed into the sediment
 * $f_{inflow}(a)$ age dependent flow of particles into the system through the sediment surface
 * $f_{outflow}(a)$ age dependent flow of particles out of the system through the sediment surface
 
-For the boundary condtion of no diffusive flux to hold, $M$, $S$ and $\lambda$ need to drop to 0 at the bottom of the observed system.
+The boundary condition at the bottom is no diffusive flus. For this to, $M$, $S$ and $\lambda$ need to drop to 0 at the bottom of the observed system.
 
 For an example, see `examples/Example_PartiMoDe.m`.
 
@@ -75,7 +77,7 @@ Here $M$, $S$, and $\lambda$ are time and depth dependent coefficient functions 
 We expand the state space by $a$ to track particle ages, and add an advection term to formalize that per time increment, particles one age increment. This leads to the equation
 
 $$
-\frac{\partial }{ \partial t} u(x,t,a) =  \frac{\partial }{\partial x} \left( M(x,t,a)  \frac{\partial }{\partial x} u(x,t,a) - S(x,t, a)  u(x,t,a) \right)  - \lambda(x,t, a)  u(x,t,a)- \frac{\partial }{\partial a} u(x,t,a)
+\frac{\partial }{ \partial t} u(d,t,a) =  \frac{\partial }{\partial d} \left( M(d,t,a)  \frac{\partial }{\partial d} u(d,t,a) - S(d,t, a)  u(d,t,a) \right)  - \lambda(d,t, a)  u(d,t,a)- \frac{\partial }{\partial a} u(d,t,a)
 $$
 
 In this model, particle behavior depends both on external controls (e.g., events occurring at a specific time), their age (e.g., age-dependent disintegration) and their burial depth.
